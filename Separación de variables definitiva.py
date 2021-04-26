@@ -50,8 +50,8 @@ Retorna:
 
 """
 def Coeficientes(x0,l,n,x,A,lx):
-    ever=lambda x: ((np.exp(-(((x-x0)**2)/l)))*np.sin(n*np.pi*x/lx))
-    integral,err=spint.quad(ever,0,lx)
+    funcion=lambda x: ((np.exp(-(((x-x0)**2)/l)))*np.sin(n*np.pi*x/lx))
+    integral,err=spint.quad(funcion,0,lx)
     
     coefi=integral*(2*A/lx)
     
